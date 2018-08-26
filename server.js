@@ -21,12 +21,12 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use((req, res, next) => {
+/*app.use((req, res, next) => {
     res.render('maintenance.hbs', {
         pageTitle: 'Maintenance Page',
         maintenanceMessage: 'Website under construction'
     });
-});
+});*/
 
 app.use(express.static(__dirname + '/public'));
 
@@ -53,7 +53,8 @@ app.get('/about', (req, res) => {
 
 app.get('/projects', (req, res) => {
     res.render('projects.hbs', {
-        pageTitle: 'My projects Page'
+        pageTitle: 'My projects Page',
+        projectsMessage: 'Hello and welcome to my projects'
     });
 });
 
